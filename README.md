@@ -35,6 +35,17 @@ CDN: https://unpkg.com/vue-media/dist
 
 The value of `query` can also be a [media query string](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) like `(max-width: 500px)`, for more info pleasae see [json2mq](https://github.com/akiran/json2mq/blob/master/README.md#usage) doc.
 
+The children of the component could be multiple, since it's a functional component:
+
+```vue
+<template>
+  <media :query="{maxWidth: 600}">
+    <h2>hello world</h2>
+    <my-other-component></my-other-component>
+  </media>
+</template>
+```
+
 For browser support, please check out [caniuse](http://caniuse.com/#search=matchmedia)
 
 ## Contributing
