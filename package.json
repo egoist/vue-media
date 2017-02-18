@@ -19,7 +19,8 @@
   "author": "egoist <0x142857@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "bili": "^0.14.0"
+    "bili": "^0.14.0",
+    "vbuild": "^6.12.1"
   },
   "dependencies": {
     "json2mq": "^0.2.0"
