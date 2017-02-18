@@ -33,7 +33,7 @@ CDN: https://unpkg.com/vue-media/dist
 </script>
 ```
 
-The value of `query` can also be a [media query string](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) like `(max-width: 500px)`, for more info pleasae see [json2mq](https://github.com/akiran/json2mq/blob/master/README.md#usage) doc.
+The value of `query` can also be a [media query string](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) like `(max-width: 500px)`, for more info please see [json2mq](https://github.com/akiran/json2mq/blob/master/README.md#usage) doc.
 
 The children of the component could be multiple, since it's a functional component:
 
