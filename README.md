@@ -35,6 +35,8 @@ CDN: https://unpkg.com/vue-media/dist
 
 The value of `query` can also be a [media query string](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) like `(max-width: 500px)`, for more info pleasae see [json2mq](https://github.com/akiran/json2mq/blob/master/README.md#usage) doc.
 
+For browser support, please check out [caniuse](http://caniuse.com/#search=matchmedia)
+
 ## Contributing
 
 1. Fork it!
