@@ -4,6 +4,7 @@ module.exports = {
   html: {
     title: 'vue-media'
   },
+  homepage: '/vue-media/',
   webpack(c) {
     console.log(c.module.rules)
     return c
