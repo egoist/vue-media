@@ -1,6 +1,6 @@
 {
   "name": "vue-media",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A CSS media query component for Vue.js",
   "repository": {
     "url": "egoist/vue-media",
