@@ -11,7 +11,7 @@
     "dist"
   ],
   "scripts": {
-    "test": "vbuild -c --eslint",
+    "test": "vbuild -c --eslint && npm run build",
     "build": "bili --format cjs --format umd --compress --module-name VueMedia",
     "example": "vbuild -cd",
     "gh": "vbuild -c && gh-pages -d dist-example"
@@ -20,6 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "bili": "^0.14.0",
+    "gh-pages": "^0.12.0",
     "vbuild": "^6.12.1"
   },
   "dependencies": {
