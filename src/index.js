@@ -27,6 +27,6 @@ export default {
     if (matches) {
       return ctx.children
     }
-    return visibleByDefault
+    return
   }
 }
