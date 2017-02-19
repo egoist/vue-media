@@ -2,7 +2,6 @@ import json2mq from 'json2mq'
 
 export default {
   name: 'media',
-  functional: true,
   props: {
     query: {
       type: [Object, String],
@@ -13,20 +12,35 @@ export default {
       default: false
     }
   },
-  render(h, ctx) {
-    const {query, visibleByDefault} = ctx.props
+  data() {
+    return {
+      matches: this.visibleByDefault
+    }
+  },
+  methods: {
+    updateMatches() {
+      this.matches = this.mediaQueryList.matches
+    }
+  },
+  mounted() {
+    const {query, matches} = this
     if (typeof window === 'undefined') {
-      return visibleByDefault
+      return matches
     }
     const mediaQuery = json2mq(query)
-    const mediaQueryList = window.matchMedia(mediaQuery)
-    mediaQueryList.addListener(() => {
-      ctx.parent.$forceUpdate()
-    })
-    const {matches} = mediaQueryList
-    if (matches) {
-      return ctx.children
+    this.mediaQueryList = window.matchMedia(mediaQuery)
+    this.updateMatches()
+    this.mediaQueryList.addListener(this.updateMatches)
+  },
+  render() {
+    if (this.matches) {
+      return this.$slots.default[0]
     }
     return
+  },
+  beforeDestroy() {
+    if (this.mediaQueryList) {
+      this.mediaQueryList.removeListener(this.updateMatches)
+    }
   }
 }
