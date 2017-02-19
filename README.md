@@ -46,7 +46,9 @@ The children of the component could be multiple, since it's a functional compone
 </template>
 ```
 
-For browser support, please check out [caniuse](http://caniuse.com/#search=matchmedia)
+## Browser support
+
+If you want to support legacy browsers (ie <= 10), please include a `window.matchMedia` [polyfill](https://github.com/paulirish/matchMedia.js/).
 
 ## Contributing
 
