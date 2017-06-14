@@ -23,7 +23,7 @@ export default {
     }
   },
   mounted() {
-    const {query, matches} = this
+    const { query, matches } = this
     if (typeof window === 'undefined') {
       return matches
     }
@@ -36,7 +36,6 @@ export default {
     if (this.matches) {
       return this.$slots.default[0]
     }
-    return
   },
   beforeDestroy() {
     if (this.mediaQueryList) {

@@ -11,17 +11,31 @@
     "dist"
   ],
   "scripts": {
-    "test": "vbuild -c --eslint && npm run build",
-    "build": "bili --format cjs --format umd --compress --module-name VueMedia",
-    "example": "vbuild -cd",
-    "gh": "vbuild -c && gh-pages -d dist-example"
+    "test": "xo",
+    "prepublish": "npm run build",
+    "build": "bili --format cjs,umd --compress --module-name Media --banner",
+    "example": "poi",
+    "build:example": "poi build",
+    "gh": "npm run build:example && gh-pages -d example/dist"
+  },
+  "poi": {
+    "entry": "example/index.js",
+    "dist": "example/dist",
+    "homepage": "/vue-media/"
+  },
+  "xo": {
+    "extends": "rem/prettier",
+    "ignores": ["example/**"],
+    "envs": ["browser"]
   },
   "author": "egoist <0x142857@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "bili": "^0.14.0",
-    "gh-pages": "^0.12.0",
-    "vbuild": "^6.12.1"
+    "bili": "^0.16.0-rc.2",
+    "eslint-config-rem": "^3.1.0",
+    "gh-pages": "^1.0.0",
+    "poi": "^9.0.2",
+    "xo": "^0.18.2"
   },
   "dependencies": {
     "json2mq": "^0.2.0"
