@@ -1,6 +1,6 @@
 {
   "name": "vue-media",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "A CSS media query component for Vue.js",
   "repository": {
     "url": "egoist/vue-media",
@@ -25,8 +25,12 @@
   },
   "xo": {
     "extends": "rem/prettier",
-    "ignores": ["example/**"],
-    "envs": ["browser"]
+    "ignores": [
+      "example/**"
+    ],
+    "envs": [
+      "browser"
+    ]
   },
   "author": "egoist <0x142857@gmail.com>",
   "license": "MIT",
