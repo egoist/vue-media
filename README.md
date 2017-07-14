@@ -46,6 +46,51 @@ This component will only return the **first one of child components**.
 </template>
 ```
 
+### Events
+
+Use the `media-enter` and `media-leave` events.
+
+```vue
+<template>
+  <div>
+    <media 
+      :query="{maxWidth: 600}"
+      @media-enter="mediaEnter"
+      @media-leave="mediaLeave"
+    >
+      <h2>Hello world</h2>
+    </media>
+    <h2 v-if="greaterThan600">I'm now wider than 600!</h2>
+  </div>
+</template>
+
+<script>
+import Media from 'vue-media'
+
+export default {
+  components: {
+    Media
+  },
+  data() {
+    return {
+      greaterThan600: window.innerWidth > 600
+    }
+  },
+  methods: {
+    mediaEnter(mediaQueryString) {
+      this.greaterThan600 = false
+    },
+    mediaLeave(mediaQueryString) {
+      this.greaterThan600 = true
+    }
+  }
+}
+</script>
+```
+
+The first argument of the listener is a [mediaQueryString](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/ likeUsing_media_queries) like `(min-width: 400px)`.
+
+
 ## Browser support
 
 If you want to support legacy browsers (ie <= 10), please include a `window.matchMedia` [polyfill](https://github.com/paulirish/matchMedia.js/).

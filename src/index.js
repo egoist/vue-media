@@ -41,5 +41,14 @@ export default {
     if (this.mediaQueryList) {
       this.mediaQueryList.removeListener(this.updateMatches)
     }
+  },
+  watch: {
+    matches(newMatch) {
+      if (this.mediaQueryList) {
+        newMatch
+          ? this.$emit('media-enter', this.mediaQueryList.media)
+          : this.$emit('media-leave', this.mediaQueryList.media)
+      }
+    }
   }
 }
