@@ -48,7 +48,7 @@ This component will only return the **first one of child components**.
 
 ### Events
 
-Use the **media-enter** and **media-leave** events.
+Use the `media-enter` and `media-leave` events.
 
 ```vue
 <template>
