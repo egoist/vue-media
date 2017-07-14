@@ -71,23 +71,24 @@ export default {
   components: {
     Media
   },
-  data () {
+  data() {
     return {
       greaterThan600: window.innerWidth > 600
     }
   },
   methods: {
-    mediaEnter () {
+    mediaEnter(mediaQueryString) {
       this.greaterThan600 = false
     },
-    mediaLeave () {
+    mediaLeave(mediaQueryString) {
       this.greaterThan600 = true
     }
   }
 }
 </script>
-
 ```
+
+The first argument of the listener is a [mediaQueryString](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/ likeUsing_media_queries) like `(min-width: 400px)`.
 
 
 ## Browser support
