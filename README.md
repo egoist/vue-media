@@ -88,7 +88,7 @@ export default {
 </script>
 ```
 
-The first argument of the listener is a [mediaQueryString](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/ likeUsing_media_queries) like `(min-width: 400px)`.
+The first argument of the listener is a [mediaQueryString](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) like `(min-width: 400px)`.
 
 
 ## Browser support
