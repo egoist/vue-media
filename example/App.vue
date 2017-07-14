@@ -3,8 +3,8 @@
     <h1>Resize the window to see the effect:</h1>
     <media
       :query="{maxWidth: 800}"
-      v-on:mediaEnter="maxWidth800"
-      v-on:mediaLeave="maxWidth800Leave"
+      @media-enter="maxWidth800"
+      @media-leave="maxWidth800Leave"
     >
       <div>
         <h2 style="color: orange">{{msg}}</h2>
@@ -13,8 +13,8 @@
     </media>
     <media
       :query="{minWidth: 800}"
-      v-on:mediaEnter="minWidth800"
-      v-on:mediaLeave="minWidth800Leave"
+      @media-enter="minWidth800"
+      @media-leave="minWidth800Leave"
     >
       <div>
         <h2 style="color: green">{{msg}}</h2>

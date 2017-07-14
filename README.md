@@ -46,15 +46,17 @@ This component will only return the **first one of child components**.
 </template>
 ```
 
+### Events
 
-Use the **mediaEnter** and **mediaLeave** events.
+Use the **media-enter** and **media-leave** events.
 
 ```vue
 <template>
   <div>
-    <media :query="{maxWidth: 600}"
-      v-on:mediaEnter="maxWidth600Enter"
-      v-on:mediaLeave="maxWidth600Leave"
+    <media 
+      :query="{maxWidth: 600}"
+      @media-enter="mediaEnter"
+      @media-leave="mediaLeave"
     >
       <h2>Hello world</h2>
     </media>
@@ -63,27 +65,26 @@ Use the **mediaEnter** and **mediaLeave** events.
 </template>
 
 <script>
-    import Media from '../src'
+import Media from 'vue-media'
 
-  // You can access `window.VueMedia` if using CDN.
-  export default {
-    components: {
-      Media
+export default {
+  components: {
+    Media
+  },
+  data () {
+    return {
+      greaterThan600: window.innerWidth > 600
+    }
+  },
+  methods: {
+    mediaEnter () {
+      this.greaterThan600 = false
     },
-    data () {
-      return {
-        greaterThan600: true
-      }
-    },
-    methods: {
-      maxWidth600Enter () {
-        this.greaterThan600 = false
-      },
-      maxWidth600Leave () {
-        this.greaterThan600 = true
-      }
+    mediaLeave () {
+      this.greaterThan600 = true
     }
   }
+}
 </script>
 
 ```

@@ -43,9 +43,11 @@ export default {
     }
   },
   watch: {
-    matches: function (newMatch) {
+    matches(newMatch) {
       if (this.mediaQueryList) {
-        newMatch ? this.$emit('mediaEnter', this.mediaQueryList.media) : this.$emit('mediaLeave', this.mediaQueryList.media)
+        newMatch
+          ? this.$emit('media-enter', this.mediaQueryList.media)
+          : this.$emit('media-leave', this.mediaQueryList.media)
       }
     }
   }

@@ -30,7 +30,10 @@
     ],
     "envs": [
       "browser"
-    ]
+    ],
+    "rules": {
+      "no-unused-expressions": 0
+    }
   },
   "author": "egoist <0x142857@gmail.com>",
   "license": "MIT",
