@@ -41,5 +41,12 @@ export default {
     if (this.mediaQueryList) {
       this.mediaQueryList.removeListener(this.updateMatches)
     }
+  },
+  watch: {
+    matches: function (newMatch) {
+      if (this.mediaQueryList) {
+        newMatch ? this.$emit('mediaEnter', this.mediaQueryList.media) : this.$emit('mediaLeave', this.mediaQueryList.media)
+      }
+    }
   }
 }
