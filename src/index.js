@@ -33,7 +33,7 @@ export default {
     this.mediaQueryList.addListener(this.updateMatches)
   },
   render() {
-    if (this.matches) {
+    if (this.matches && this.$slots.default && this.$slots.default.length > 0) {
       return this.$slots.default[0]
     }
   },
