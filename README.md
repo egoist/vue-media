@@ -24,7 +24,7 @@ CDN: https://unpkg.com/vue-media/dist
 
 <script>
   import Media from 'vue-media'
-  // You can access `window.VueMedia` if using CDN.
+  // Component is automatically registered if using CDN.
   export default {
     components: {
       Media
