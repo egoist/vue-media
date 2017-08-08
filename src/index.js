@@ -1,6 +1,6 @@
 import json2mq from 'json2mq'
 
-export default {
+const Media = {
   name: 'media',
   props: {
     query: {
@@ -52,3 +52,9 @@ export default {
     }
   }
 }
+
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.component(Media.name, Media)
+}
+
+export default Media
