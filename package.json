@@ -6,14 +6,14 @@
     "url": "egoist/vue-media",
     "type": "git"
   },
-  "main": "dist/vue-media.common.js",
+  "main": "dist/vue-media.cjs.js",
   "files": [
     "dist"
   ],
   "scripts": {
     "test": "xo",
-    "prepublish": "npm run build",
-    "build": "bili --format cjs,umd --compress --module-name Media --banner",
+    "prepublishOnly": "npm run build",
+    "build": "bili --format cjs,umd,umd-min --module-name Media --banner",
     "example": "poi",
     "build:example": "poi build",
     "gh": "npm run build:example && gh-pages -d example/dist"
@@ -38,7 +38,7 @@
   "author": "egoist <0x142857@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "bili": "^0.16.0-rc.2",
+    "bili": "^3.0.4",
     "eslint-config-rem": "^3.1.0",
     "gh-pages": "^1.0.0",
     "poi": "^9.0.2",
