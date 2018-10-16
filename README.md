@@ -90,6 +90,12 @@ export default {
 
 The first argument of the listener is a [mediaQueryString](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) like `(min-width: 400px)`.
 
+### Props
+
+|Prop|Type|Default|Description|
+|---|---|---|---|
+|visibleByDefault|`boolean`|`false`|Whether to show the element by default.|
+
 
 ## Browser support
 
