@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/vue-media.svg?style=flat)](https://npmjs.com/package/vue-media) [![NPM downloads](https://img.shields.io/npm/dm/vue-media.svg?style=flat)](https://npmjs.com/package/vue-media) [![Build Status](https://img.shields.io/circleci/project/egoist/vue-media/master.svg?style=flat)](https://circleci.com/gh/egoist/vue-media) [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/egoist/donate)
 
-Like [react-media](https://github.com/ReactTraining/react-media) but for Vue.js, and this library is pretty small, it's 969 bytes after minified without gzip.
+Like [react-media](https://github.com/ReactTraining/react-media) but for Vue.js, and this library is pretty small, it's 969 bytes after minification without gzip.
 
 ## Install
 
@@ -35,13 +35,13 @@ CDN: https://unpkg.com/vue-media/dist
 
 The value of `query` can also be a [media query string](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) like `(max-width: 500px)`, for more info please see [json2mq](https://github.com/akiran/json2mq/blob/master/README.md#usage) doc.
 
-This component will only return the **first one of child components**.
+The `media` component will only return the **first element or component** passed to it. Example:
 
 ```vue
 <template>
   <media :query="{maxWidth: 600}">
     <h2>hello world</h2>
-    <my-other-component></my-other-component> <!-- this will not be use! -->
+    <my-other-component></my-other-component> <!-- this will not be used! -->
   </media>
 </template>
 ```
