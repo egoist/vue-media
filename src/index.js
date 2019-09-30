@@ -4,7 +4,7 @@ const Media = {
   name: 'media',
   props: {
     query: {
-      type: [Object, String],
+      type: [Object, String, Array],
       required: true
     },
     visibleByDefault: {
